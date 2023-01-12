@@ -1,0 +1,107 @@
+{
+	"info": {
+		"_postman_id": "42d18eb4-4b03-46c2-9c10-314f5f5e7777",
+		"name": "CDQ task processor",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "20846538"
+	},
+	"item": [
+		{
+			"name": "create new task",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/task?pattern=abcdefghij&input=klmnoprstu",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"task"
+					],
+					"query": [
+						{
+							"key": "pattern",
+							"value": "abcdefghij"
+						},
+						{
+							"key": "input",
+							"value": "klmnoprstu"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "check task status",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/task/status?taskId=3509",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"task",
+						"status"
+					],
+					"query": [
+						{
+							"key": "taskId",
+							"value": "3509"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "check status result",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/task/result?taskId=2978",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"task",
+						"result"
+					],
+					"query": [
+						{
+							"key": "taskId",
+							"value": "2978"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get all tasks",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/task/all",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"task",
+						"all"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
